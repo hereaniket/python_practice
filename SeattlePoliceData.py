@@ -27,9 +27,15 @@ print(sub_set["Call Type"].unique())
 sub_set.loc[(sub_set['Call Type'] == '911'), 'Call Type'] = '1'
 sub_set.loc[(sub_set['Call Type'] == 'TELEPHONE OTHER, NOT 911'), 'Call Type'] = '2'
 sub_set.loc[(sub_set['Call Type'] == 'ONVIEW'), 'Call Type'] = '3'
-sub_set.loc[(sub_set['Call Type'] == 'ALARM CALL (NOT POLICE ALARM'), 'Call Type'] = '4'
+sub_set.loc[(sub_set['Call Type'] == 'ALARM CALL (NOT POLICE ALARM)'), 'Call Type'] = '4'
 sub_set.loc[(sub_set['Call Type'] == 'TEXT MESSAGE'), 'Call Type'] = '5'
-sub_set.loc[(sub_set['Call Type'] == 'ALARM CALL (NOT POLICE ALARM)'), 'Call Type'] = '6'
 
 print(sub_set["Call Type"].unique())
 
+# This will print counts for all the call types
+group_set = sub_set.groupby(['Call Type']).count()
+
+print(group_set)
+
+# This will plot the bar graph
+group_set.plot.bar(rot=0)
