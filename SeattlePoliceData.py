@@ -37,5 +37,9 @@ group_set = sub_set.groupby(['Call Type']).count()
 
 print(group_set)
 
+#stats for the data
+print(sub_set['Call Type'].describe())
+
 # This will plot the bar graph
-group_set.plot.bar(rot=0)
+#group_set.plot.bar(rot=0)
+
