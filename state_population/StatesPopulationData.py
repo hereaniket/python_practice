@@ -1,6 +1,6 @@
 import pandas as pd
 
-filepath = "/Users/aniketpathak/Documents/IMPORTANT/MS/CST-570/Topic-2/stateandyearwise.csv"
+filepath = "data/stateandyearwise.csv"
 dataTypes = {
     "state_name": "string",
     "2010": "string",
@@ -32,7 +32,7 @@ for i in range(0, raw_data['state_name'].count()):
 
 new_population_df = pd.concat(frames)
 print(new_population_df.head())
-new_population_df.to_csv('/Users/aniketpathak/Documents/IMPORTANT/MS/CST-570/Topic-2/out.csv', index=False)
+new_population_df.to_csv('data/out.csv', index=False)
 
 
 # filtering data

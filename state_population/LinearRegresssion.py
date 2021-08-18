@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt  # To visualize
 import pandas as pd  # To read data
 from sklearn.linear_model import LinearRegression
 
-filepath = "/Users/aniketpathak/Documents/IMPORTANT/MS/CST-570/Topic-2/out.csv"
+filepath = "data/out.csv"
 dataTypes = {
     "state_name": "string",
     "year": "int64",
