@@ -23,6 +23,32 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import statsmodels.api as sm
 
+data_type = {
+    "customer_id": "string",
+    "gender": "string",
+    "senior_citizen": "string",
+    "partner": "string",
+    "dependents": "string",
+    "tenure": "string",
+    "phone_service": "string",
+    "multiple_lines": "string",
+    "internet_service": "string",
+    "online_security": "string",
+    "online_backup": "string",
+    "device_protection": "string",
+    "tech_support": "string",
+    "streaming_service": "string",
+    "streaming_movies": "string",
+    "contract": "string",
+    "paperless_billing": "string",
+    "payment_method": "string",
+    "monthly_charges": "string",
+    "total_charges": "string",
+    "churn": "string"
+}
+filepath = "data/Data_Formatted.csv"
+
+data = pd.read_csv(filepath_or_buffer=filepath, dtype=data_type)
 
 # Following columns have categorical data types and they need to be converted to dummy variables
 dummy_variable_columns = [
